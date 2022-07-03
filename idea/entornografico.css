@@ -1,0 +1,117 @@
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.border {
+    border: 1px black solid;
+}
+
+header{
+    grid-area: header;
+    background-color: aqua;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 50px 0;
+}
+
+nav {
+    grid-area: navbar;
+    background-color: tan;
+}
+
+main {
+    grid-area: main;
+    background-color: palegoldenrod;
+}
+
+footer {
+    grid-area: footer;
+    background-color: lightgreen;
+}
+
+
+/* Media query para dispositivo mobile*/
+@media (max-width: 575px) {
+    .grid {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows:10rem 10rem 50rem 10rem;
+        grid-template-areas: 
+        "headerzzzz"
+        "navbar"
+        "main"
+        "footer";
+    }
+    
+    .border {
+        border: 1px black solid;
+    }
+    
+    header{
+        grid-area: headerzzzz;
+        background-color: aqua;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding: 50px 0;
+    }
+    
+    nav {
+        grid-area: navbar;
+        background-color: tan;
+    }
+    
+    main {
+        grid-area: main;
+        background-color: palegoldenrod;
+    }
+    
+    footer {
+        grid-area: footer;
+        background-color: lightgreen;
+    }
+}
+
+/* Media query para dispositivo tablet+*/
+@media (min-width: 576px) {
+    #grid {
+        display: grid;
+        grid-template-columns:25% 50% 25%;
+        grid-template-rows:10rem 50rem 10rem;
+        grid-template-areas: 
+        "header navbar navbar"
+        "main main main"
+        "footer footer footer";
+    }
+    
+    .border {
+        border: 1px black solid;
+    }
+    
+    header{
+        grid-area: header;
+        background-color: aqua;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding: 50px 0;
+    }
+    
+    nav {
+        grid-area: navbar;
+        background-color: tan;
+    }
+    
+    main {
+        grid-area: main;
+        background-color: palegoldenrod;
+    }
+    
+    footer {
+        grid-area: footer;
+        background-color: lightgreen;
+    }
+} */
