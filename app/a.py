@@ -20,6 +20,8 @@ while True:
 
     if status_code == 0:
         trip_duration = json_data["route"]["formattedTime"]
+        distance = json_data["route"]["distance"]
         print("===============================================")
-        print(f"informacion del viaje desde {origin.capitalize()} hasta {destination.capitalize()}")
-        print(f"Duracion del viaje: {trip_duration()}")
+        print(f"Informacion del viaje desde {origin.capitalize()} hasta {destination.capitalize()}.")
+        print(f"Duracion del viaje: {trip_duration}.")
+        print("Distancia:" + str("{:.2f}".format(distance) + "Km"))
