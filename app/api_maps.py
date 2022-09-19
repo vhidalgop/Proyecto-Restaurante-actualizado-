@@ -25,9 +25,11 @@ while True:
         print(f"Informacion del viaje desde {origin.capitalize()} hasta {destination.capitalize()}.")
         print(f"Duracion del viaje: {trip_duration}.")
         print("Distancia:" + str("{:.2f}".format(distance) + "Km"))
-            # print("================================================")
-            # print("indicaciones del viaje")
+        print("================================================")
+        print("indicaciones del viaje")
 
-            # for each in json_data["route"]["legs"][0]["maneuvers"]:
-            #     print(each["narrative"])
+        for each in json_data["route"]["legs"][0]["maneuvers"]:
+            distance_remain = distance - each["distance"] * 1.61
+            print(each["narrative"] + "(" + str("{:.2f}".format(distance_remain)) + "Km faltantes")
+            distance = distance_remain
                 
