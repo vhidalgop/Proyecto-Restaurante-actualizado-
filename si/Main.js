@@ -17,8 +17,8 @@ directionsDisplay.setMap(map);
 function calcRoute() {
 
     var request = {
-        origin: document.getElementById("from").value,
-        destination: document.getElementById("to").value,
+        origin: document.getElementById("Desde").value,
+        destination: document.getElementById("Hasta").value,
         travelMode: google.maps.TravelMode.DRIVING, 
         unitSystem: google.maps.UnitSystem.IMPERIAL
     }
@@ -27,7 +27,7 @@ function calcRoute() {
         if (status == google.maps.DirectionsStatus.OK) {
 
             const output = document.querySelector('#output');
-            output.innerHTML = "<div class='alert-info'>from: " + document.getElementById("from").value + ".<br />to: " + document.getElementById("to").value + ".<br /> Distance de manejo <i class='fas fa-road'></i> : " + result.routes[0].legs[0].distance.text + ".<br />Duracion <i class='fas fa-hourglass-start'></i> : " + result.routes[0].legs[0].duration.text + ".</div>";
+            output.innerHTML = "<div class='alert-info'>Desde: " + document.getElementById("Desde").value + ".<br />Hasta: " + document.getElementById("Hasta").value + ".<br /> Distancia de manejo <i class='fas fa-road'></i> : " + result.routes[0].legs[0].distance.text + ".<br />Duracion <i class='fas fa-hourglass-start'></i> : " + result.routes[0].legs[0].duration.text + ".</div>";
 
             directionsDisplay.setDirections(result);
         } else {
@@ -43,14 +43,12 @@ function calcRoute() {
 }
 
 
-
-//create autocomplete objects for all inputs
 var options = {
     types: ['(cities)']
 }
 
-var input1 = document.getElementById("from");
+var input1 = document.getElementById("Desde");
 var autocomplete1 = new google.maps.places.Autocomplete(input1, options);
 
-var input2 = document.getElementById("to");
+var input2 = document.getElementById("Hasta");
 var autocomplete2 = new google.maps.places.Autocomplete(input2, options);
