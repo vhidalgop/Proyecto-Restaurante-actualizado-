@@ -32,12 +32,13 @@
       <br> Bienvenido. <?= $users['email']; ?>
       <br>Pudiste acceder exitosamente a tu cuenta
       <a href="../index.html">
-        Volver a la pagina de inicio
+        Volver a pagina principal
       </a>
-      </br> ¿O desea salir de la sesion?
+      <br>¿O desea cerrar sesión?
       <a href="./logout.php">
         Logout
       </a>
+
     <?php else: ?>
       <h1>Por favor inicia sesion o crea una cuenta</h1>
 

@@ -17,7 +17,7 @@
 
     if (count($results) > 0 && password_verify($_POST['password'], $results['password'])) {
       $_SESSION['users_id'] = $results['id'];
-      header("Location: /php-login");
+      header("Location: ./index.php");
     } else {
       $message = 'Lo lamento, las credenciales no funcionan';
     }
